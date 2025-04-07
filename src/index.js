@@ -19,12 +19,12 @@ module.exports = {
     }
     
 
-    if (findOneUser) {
+    if (findOneUser >= 0) {
       initializeRoute(userRoutes, findOneUser);
       userRoutes[findOneUser].config.middlewares.push(isUserOwnerMiddleware);
     }
 
-    if (findUpdateUser) {
+    if (findUpdateUser >= 0) {
       initializeRoute(userRoutes, findUpdateUser);
       userRoutes[findUpdateUser].config.middlewares.push(isUserOwnerMiddleware);
     }
